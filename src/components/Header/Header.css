@@ -1,0 +1,82 @@
+.header {
+  position: fixed;
+  z-index: 200;
+  padding: 1rem 2rem;
+  min-height: 3.5rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  height: 1.5rem;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-a img {
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.cesta {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.cesta img {
+  height: 2rem;
+}
+.header-a:hover {
+  text-decoration: underline;
+}
+.header-ul {
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-button {
+  background-color: transparent;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+.header-button img {
+  height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .header-button {
+    display: flex;
+  }
+  .header-nav {
+    display: none;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: end;
+    height: 0vh;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .header-nav.Active {
+    height: 37vh;
+    opacity: 1;
+  }
+  .header-ul {
+    flex-direction: column;
+  }
+  .header-li {
+    margin: 0.5rem;
+  }
+}
